@@ -39,6 +39,7 @@ class TweetCell: DatasourceCell {
     let messageTextView: UITextView = {
         let tv = UITextView()
         tv.text = "tweet"
+        tv.backgroundColor = .clear
         return tv
     }()
     
@@ -52,6 +53,30 @@ class TweetCell: DatasourceCell {
         return imageView
     }()
     
+    
+    let replyButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(#imageLiteral(resourceName: "reply").withRenderingMode(.alwaysOriginal), for: .normal)
+        return button
+    }()
+    
+    let retweetButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(#imageLiteral(resourceName: "retweet").withRenderingMode(.alwaysOriginal), for: .normal)
+        return button
+    }()
+    
+    let likeButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(#imageLiteral(resourceName: "like").withRenderingMode(.alwaysOriginal), for: .normal)
+        return button
+    }()
+    
+    let DMButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setImage(#imageLiteral(resourceName: "send_message").withRenderingMode(.alwaysOriginal), for: .normal)
+        return button
+    }()
     
 
     override func setupViews() {
@@ -69,23 +94,57 @@ class TweetCell: DatasourceCell {
         
         messageTextView.anchor(topAnchor, left: profileImageView.rightAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 4, leftConstant: 4, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+        setBottomButtons()
         
     }
+    
+    fileprivate func setBottomButtons() {
+        
+        let replyButtonView = UIView()
+
+        let retweetButtonView = UIView()
+        
+        let likeButtonView = UIView()
+        
+        let DMButtonView = UIView()
+        
+        let buttonStackView = UIStackView(arrangedSubviews: [replyButtonView, retweetButtonView, likeButtonView, DMButtonView])
+
+        buttonStackView.axis = .horizontal
+        buttonStackView.distribution = .fillEqually
+        
+        addSubview(buttonStackView)
+        
+        buttonStackView.anchor(nil, left: messageTextView.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 4, rightConstant: 0, widthConstant: 0, heightConstant: 20)
+        
+        
+        addSubview(replyButton)
+        addSubview(retweetButton)
+        addSubview(likeButton)
+        addSubview(DMButton)
+        
+        
+        replyButton.anchor(replyButtonView.topAnchor, left: replyButtonView.leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 20, heightConstant: 20)
+        
+        retweetButton.anchor(retweetButtonView.topAnchor, left: retweetButtonView.leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 20, heightConstant: 20)
+        
+        likeButton.anchor(likeButtonView.topAnchor, left: likeButtonView.leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 20, heightConstant: 20)
+        
+        DMButton.anchor(DMButtonView.topAnchor, left: DMButtonView.leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 20, heightConstant: 20)
+
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
 }

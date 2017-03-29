@@ -13,6 +13,11 @@ import Foundation
 
 class HomeDataSourceController: DatasourceController {
     
+    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+            collectionViewLayout.invalidateLayout()
+    }
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
