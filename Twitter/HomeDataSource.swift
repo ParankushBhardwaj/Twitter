@@ -11,11 +11,11 @@ import LBTAComponents
 class HomeDataSource: Datasource {
     
     let users: [User] = {
-        let brainUser = User(name: "Parankush Bhardwaj", username: "@ParankushB", bioText: "iOS Developer. Proud fanboy of Apple and Tesla. Coffee addict.", profileImage: #imageLiteral(resourceName: "profile_image"))
+        let me = User(name: "Parankush Bhardwaj", username: "@ParankushB", bioText: "iOS Developer. Proud fanboy of Apple and Tesla. Coffee addict.", profileImage: #imageLiteral(resourceName: "profile_image"))
         
-        let heartUser = User(name: "Elon Musk", username: "@elonmusk", bioText: "Tesla, SpaceX, Tunnels & OpenAI", profileImage: #imageLiteral(resourceName: "elon"))
+        let musk = User(name: "Elon Musk", username: "@elonmusk", bioText: "Tesla, SpaceX, Tunnels & OpenAI", profileImage: #imageLiteral(resourceName: "elon"))
         
-        return [brainUser, heartUser]
+        return [me, musk]
     }()
     
     

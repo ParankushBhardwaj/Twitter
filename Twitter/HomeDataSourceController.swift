@@ -7,9 +7,13 @@
 //
 
 import LBTAComponents
+import UIKit
+import Foundation
 
 
 class HomeDataSourceController: DatasourceController {
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -18,9 +22,32 @@ class HomeDataSourceController: DatasourceController {
         self.datasource = homeDataSource
     }
     
+    //closes gap between cells
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 0
+    }
+    
     
     override func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 150)
+        
+        if let user = self.datasource?.item(indexPath) as? User {
+            
+            let widthOfBio = view.frame.width - 12 - 50 - 12 - 2
+            
+            let size = CGSize(width: widthOfBio, height: 1000)
+            
+            let attributes = [NSFontAttributeName: UIFont.systemFont(ofSize: 15)]
+            
+            //get height based off of user's bio text
+            let estimatedFrame = NSString(string: user.bioText).boundingRect(with: size, options: .usesLineFragmentOrigin, attributes: attributes, context: nil)
+            
+            
+            return CGSize(width: view.frame.width, height: estimatedFrame.height + 66)
+        }
+        
+        
+        
+        return CGSize(width: view.frame.width, height: 200)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
