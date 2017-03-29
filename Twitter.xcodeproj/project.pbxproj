@@ -12,8 +12,10 @@
 		1D90BE551E8B5844004433CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D90BE531E8B5844004433CA /* LaunchScreen.storyboard */; };
 		1D90BE5D1E8B5A33004433CA /* HomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D90BE5C1E8B5A33004433CA /* HomeController.swift */; };
 		1D90BE721E8B7ACB004433CA /* HomeDataSourceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D90BE711E8B7ACB004433CA /* HomeDataSourceController.swift */; };
-		1D90BE771E8B807B004433CA /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D90BE761E8B807B004433CA /* Cells.swift */; };
+		1D90BE771E8B807B004433CA /* UserHeaderFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D90BE761E8B807B004433CA /* UserHeaderFooter.swift */; };
 		1D90BE791E8B80F0004433CA /* HomeDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D90BE781E8B80F0004433CA /* HomeDataSource.swift */; };
+		1D90BE7B1E8C0974004433CA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D90BE7A1E8C0973004433CA /* User.swift */; };
+		1D90BE7F1E8C1081004433CA /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D90BE7E1E8C1081004433CA /* UserCell.swift */; };
 		C716CB1C084176CE0BA0F81C /* Pods_Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 82DCCD5D8706E2F05139F7C7 /* Pods_Twitter.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,8 +28,10 @@
 		1D90BE561E8B5844004433CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1D90BE5C1E8B5A33004433CA /* HomeController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeController.swift; sourceTree = "<group>"; };
 		1D90BE711E8B7ACB004433CA /* HomeDataSourceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDataSourceController.swift; sourceTree = "<group>"; };
-		1D90BE761E8B807B004433CA /* Cells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		1D90BE761E8B807B004433CA /* UserHeaderFooter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserHeaderFooter.swift; sourceTree = "<group>"; };
 		1D90BE781E8B80F0004433CA /* HomeDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeDataSource.swift; sourceTree = "<group>"; };
+		1D90BE7A1E8C0973004433CA /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		1D90BE7E1E8C1081004433CA /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		82DCCD5D8706E2F05139F7C7 /* Pods_Twitter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Twitter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E87AEA43EA68875ED05080FC /* Pods-Twitter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Twitter/Pods-Twitter.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				1D90BE781E8B80F0004433CA /* HomeDataSource.swift */,
+				1D90BE7A1E8C0973004433CA /* User.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -96,7 +101,8 @@
 		1D90BE751E8B8042004433CA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				1D90BE761E8B807B004433CA /* Cells.swift */,
+				1D90BE761E8B807B004433CA /* UserHeaderFooter.swift */,
+				1D90BE7E1E8C1081004433CA /* UserCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -243,9 +249,11 @@
 			files = (
 				1D90BE791E8B80F0004433CA /* HomeDataSource.swift in Sources */,
 				1D90BE721E8B7ACB004433CA /* HomeDataSourceController.swift in Sources */,
-				1D90BE771E8B807B004433CA /* Cells.swift in Sources */,
+				1D90BE7B1E8C0974004433CA /* User.swift in Sources */,
+				1D90BE771E8B807B004433CA /* UserHeaderFooter.swift in Sources */,
 				1D90BE4B1E8B5844004433CA /* AppDelegate.swift in Sources */,
 				1D90BE5D1E8B5A33004433CA /* HomeController.swift in Sources */,
+				1D90BE7F1E8C1081004433CA /* UserCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
