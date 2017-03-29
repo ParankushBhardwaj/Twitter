@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D2A89801E8C4A6A0058ED21 /* TweetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2A897F1E8C4A6A0058ED21 /* TweetCell.swift */; };
+		1D2A89821E8C513C0058ED21 /* Tweet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D2A89811E8C513C0058ED21 /* Tweet.swift */; };
 		1D90BE4B1E8B5844004433CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D90BE4A1E8B5844004433CA /* AppDelegate.swift */; };
 		1D90BE521E8B5844004433CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1D90BE511E8B5844004433CA /* Assets.xcassets */; };
 		1D90BE551E8B5844004433CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1D90BE531E8B5844004433CA /* LaunchScreen.storyboard */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		0B8E7C25185C0ECFA93CBABD /* Pods-Twitter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Twitter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Twitter/Pods-Twitter.debug.xcconfig"; sourceTree = "<group>"; };
 		1D2A897F1E8C4A6A0058ED21 /* TweetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TweetCell.swift; sourceTree = "<group>"; };
+		1D2A89811E8C513C0058ED21 /* Tweet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tweet.swift; sourceTree = "<group>"; };
 		1D90BE471E8B5844004433CA /* Twitter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Twitter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1D90BE4A1E8B5844004433CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1D90BE511E8B5844004433CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -99,7 +101,7 @@
 			children = (
 				1D90BE781E8B80F0004433CA /* HomeDataSource.swift */,
 				1D90BE7A1E8C0973004433CA /* User.swift */,
-				1D2A897F1E8C4A6A0058ED21 /* TweetCell.swift */,
+				1D2A89811E8C513C0058ED21 /* Tweet.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -109,6 +111,7 @@
 			children = (
 				1D90BE761E8B807B004433CA /* UserHeaderFooter.swift */,
 				1D90BE7E1E8C1081004433CA /* UserCell.swift */,
+				1D2A897F1E8C4A6A0058ED21 /* TweetCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1D90BE791E8B80F0004433CA /* HomeDataSource.swift in Sources */,
+				1D2A89821E8C513C0058ED21 /* Tweet.swift in Sources */,
 				1D90BE721E8B7ACB004433CA /* HomeDataSourceController.swift in Sources */,
 				1D90BE7B1E8C0974004433CA /* User.swift in Sources */,
 				1D90BE771E8B807B004433CA /* UserHeaderFooter.swift in Sources */,
