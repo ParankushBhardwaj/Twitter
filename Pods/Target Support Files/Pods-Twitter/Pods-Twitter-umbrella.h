@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double LBTAComponentsVersionNumber;
-FOUNDATION_EXPORT const unsigned char LBTAComponentsVersionString[];
+FOUNDATION_EXPORT double Pods_TwitterVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_TwitterVersionString[];
 
