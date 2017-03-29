@@ -17,10 +17,16 @@ class HomeDataSourceController: DatasourceController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setUpNavigationBarItems()
+    
         //bottom two lines render outs HomeDataSource.words
         let homeDataSource = HomeDataSource()
         self.datasource = homeDataSource
     }
+    
+    
+    
+    
     
     //closes gap between cells
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
