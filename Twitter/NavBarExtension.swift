@@ -28,6 +28,18 @@ extension HomeDataSourceController {
         titleImageView.contentMode = .scaleAspectFit
         navigationItem.titleView = titleImageView
         
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        
+        navigationController?.navigationBar.backgroundColor = .white
+        navigationController?.navigationBar.isTranslucent = false
+        
+        let navBarSeperator = UIView()
+        
+        navBarSeperator.backgroundColor = UIColor(r: 230, g: 230, b: 230)
+        view.addSubview(navBarSeperator)
+        
+        navBarSeperator.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0.5)
     }
     
     
