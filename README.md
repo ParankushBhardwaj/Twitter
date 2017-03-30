@@ -1,2 +1,2 @@
 # Twitter client 
-![demo](https://cloud.githubusercontent.com/assets/25040953/24487467/b3f13554-14dd-11e7-978d-f43e5022f5a5.gif)
+![demo](https://cloud.githubusercontent.com/assets/25040953/24505655/b0687f82-1528-11e7-89ee-4c1ae68c2fa5.gif)
