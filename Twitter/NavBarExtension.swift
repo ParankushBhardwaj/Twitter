@@ -17,6 +17,8 @@ extension HomeDataSourceController {
         setupLeftNavigationButtons()
         setupRightNaviationButtons()
         
+        setupBottomNavigationButtons()
+        
     }
     
     
@@ -35,7 +37,7 @@ extension HomeDataSourceController {
         navigationController?.navigationBar.isTranslucent = false
         
         let navBarSeperator = UIView()
-        
+
         navBarSeperator.backgroundColor = UIColor(r: 230, g: 230, b: 230)
         view.addSubview(navBarSeperator)
         
@@ -71,5 +73,29 @@ extension HomeDataSourceController {
         navigationItem.rightBarButtonItems = [UIBarButtonItem(customView: composeButton), UIBarButtonItem(customView: searchButton)]
         
     }
+    
+    
+    private func setupBottomNavigationButtons() {
+        
+        //first do the twitter logo in the top center
+        let titleImageView = UIImageView(image: #imageLiteral(resourceName: "title_icon"))
+        titleImageView.frame = CGRect(x: 0, y: 0, width: 34, height: 34)
+        titleImageView.contentMode = .scaleAspectFit
+        navigationItem.titleView = titleImageView
+        
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        
+        navigationController?.navigationBar.backgroundColor = .white
+        navigationController?.navigationBar.isTranslucent = false
+        
+        let navBarSeperator = UIView()
+        
+        navBarSeperator.backgroundColor = UIColor(r: 230, g: 230, b: 230)
+        view.addSubview(navBarSeperator)
+        
+        navBarSeperator.anchor(nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0.5)
+    }
+
 
 }

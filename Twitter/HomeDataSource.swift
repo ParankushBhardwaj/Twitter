@@ -11,11 +11,14 @@ import LBTAComponents
 class HomeDataSource: Datasource {
     
     let users: [User] = {
-        let me = User(name: "Parankush Bhardwaj", username: "@ParankushB", bioText: "iOS Developer. Proud fanboy of Apple and Tesla. Coffee addict.", profileImage: #imageLiteral(resourceName: "profile_image"))
-        
+                
         let musk = User(name: "Elon Musk", username: "@elonmusk", bioText: "Tesla, SpaceX, Tunnels & OpenAI", profileImage: #imageLiteral(resourceName: "elon"))
         
-        return [me, musk]
+        let Obama = User(name: "President Obama", username: "@POTUS44", bioText: "This is an archive of an Obama Administration account maintained by the National Archives and Records Administration (NARA).", profileImage: #imageLiteral(resourceName: "Obama"))
+        
+        let Tim = User(name: "Tim Cook", username: "@tim_cook", bioText: "CEO Apple, Fan of Auburn football and Duke basketball", profileImage: #imageLiteral(resourceName: "Cook"))
+        
+        return [Obama, musk, Tim]
     }()
     
     
@@ -23,12 +26,20 @@ class HomeDataSource: Datasource {
     
     let tweets: [Tweet] = {
         
-        let me = User(name: "Parankush Bhardwaj", username: "@ParankushB", bioText: "iOS Developer. Proud fanboy of Apple and Tesla. Coffee addict.", profileImage: #imageLiteral(resourceName: "profile_image"))
-        let tweet = Tweet(user: me, message: "\"Choosing ..what you know will be unpopular in the short run but ..will prove correct in the long run takes courage\" ")
         
-        let tweet2 = Tweet(user: me, message: "As tech outgrows the tech industry, and raw feeds & speeds matter less and less, Apple plays more & more to its strengths.")
-
+        let me2 = User(name: "Parankush Bhardwaj", username: "@ParankushB", bioText: "iOS Developer. Proud fanboy of Apple and Tesla. Coffee addict.", profileImage: #imageLiteral(resourceName: "profile_image"))
         
+        let tweet = Tweet(user: me2, message: "Things that didn't exist in 2006                                                                                     - iPhone                                                                                                  - iPad                                                                - Uber                                                                            - Android                                                             - Instagram                                                                         - Snapchat")
+        
+         let newTweet = Tweet(user: me2, message: "what's on your back?                                                                         \"a katana\"                                                                                        what?                                                                                       \"it's a japanese sword used...you know what *takes back résumé* I don't think I wanna work here\"                      ")
+        
+        
+        let tweet2 = Tweet(user: me2, message: "Techological progress is accelerating at a rate never seen before, this is despite many economic obstacles.")
+        
+        //what's on your back?
+        //"a katana"
+        //what?
+        //"it's a japanese sword used...you know what *takes back résumé* I don't think I wanna work here"
     
         return [tweet, tweet2]
     }()
